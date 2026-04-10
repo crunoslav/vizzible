@@ -190,13 +190,341 @@
       margin-bottom: 60px;
     }
 
-    /* rest unchanged... */
+    .what-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      max-width: 900px;
+    }
+
+    .what-item {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .what-item:nth-child(odd) {
+      padding-right: 60px;
+    }
+
+    .what-item:nth-child(even) {
+      padding-left: 60px;
+      border-left: 1px solid var(--border);
+    }
+
+    .what-number {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+
+    .what-title {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .what-desc {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      color: var(--grey);
+      line-height: 1.8;
+    }
+
+    .what-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+    }
+
+    .case-study {
+      max-width: 700px;
+    }
+
+    .case-meta {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .case-meta-item {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .case-meta-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 6px;
+    }
+
+    .case-meta-value {
+      font-size: 13px;
+      color: var(--white);
+    }
+
+    .case-headline,
+    .contact-headline {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 620px;
+    }
+
+    .case-headline {
+      margin-bottom: 32px;
+    }
+
+    .case-body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    .case-quote {
+      border-left: 1px solid var(--accent);
+      padding-left: 28px;
+      margin: 40px 0 32px;
+    }
+
+    .case-quote p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      font-style: italic;
+    }
+
+    .case-quote cite {
+      display: block;
+      margin-top: 16px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey);
+      font-style: normal;
+    }
+
+    .case-link {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .case-link:hover {
+      color: var(--white);
+    }
+
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      max-width: 700px;
+    }
+
+    .pipeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .pipeline-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pipeline-name {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .pipeline-meta {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 11px;
+      color: var(--grey);
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: right;
+    }
+
+    .pipeline-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    .services-list {
+      list-style: none;
+      max-width: 500px;
+    }
+
+    .services-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .services-list li:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service-status {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .service-status.soon {
+      color: var(--grey);
+      opacity: 0.4;
+    }
+
+    #contact {
+      justify-content: flex-start;
+    }
+
+    .contact-block {
+      height: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 12vh;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 120px;
+      padding-bottom: 12px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .contact-email:hover {
+      border-color: var(--accent);
+    }
+
+    .contact-email::after {
+      content: '→';
+      transition: transform 0.3s ease;
+    }
+
+    .contact-email:hover::after {
+      transform: translateX(6px);
+    }
+
+    .contact-footer {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .contact-footer span {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 11px;
+      color: var(--grey);
+      letter-spacing: 0.1em;
+    }
 
     @media (max-width: 768px) {
       nav,
       .snap-section {
         padding-left: 24px;
         padding-right: 24px;
+      }
+
+      .nav-logo img {
+        height: 24px;
+      }
+
+      .what-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .what-item:nth-child(odd) {
+        padding-right: 0;
+      }
+
+      .what-item:nth-child(even) {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .case-meta {
+        gap: 20px;
+      }
+
+      .pipeline-item,
+      .services-list li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pipeline-meta {
+        text-align: left;
+      }
+
+      .contact-block {
+        padding-top: 10vh;
+      }
+
+      .contact-email {
+        margin-top: 96px;
+      }
+
+      .contact-footer {
+        left: 24px;
+        right: 24px;
       }
     }
 
@@ -237,8 +565,163 @@
       <div class="hero-line"></div>
     </section>
 
-    <!-- rest of your HTML unchanged -->
+    <section class="snap-section" id="work">
+      <p class="section-label reveal">what we do</p>
 
+      <div class="what-grid">
+        <div class="what-item reveal">
+          <p class="what-number">01</p>
+          <h3 class="what-title">websites</h3>
+          <p class="what-desc">
+            built to match the quality of what you actually do. no templates.
+            a site that earns trust before anyone picks up the phone.
+          </p>
+        </div>
+
+        <div class="what-item reveal">
+          <p class="what-number">02</p>
+          <h3 class="what-title">positioning</h3>
+          <p class="what-desc">
+            before we build, we find the one thing that makes you worth choosing.
+            that clarity shapes everything — the site, the copy, how you show up.
+          </p>
+        </div>
+
+        <div class="what-item reveal">
+          <p class="what-number">03</p>
+          <h3 class="what-title">social presence</h3>
+          <p class="what-desc">
+            consistent presence built around what you actually do — not what
+            everyone else is posting. bio, structure, voice. done once, done right.
+          </p>
+          <span class="what-tag">coming soon</span>
+        </div>
+
+        <div class="what-item reveal">
+          <p class="what-number">04</p>
+          <h3 class="what-title">automations</h3>
+          <p class="what-desc">
+            workflows that take the repetitive work off your plate. content,
+            follow-up, client communication — handled.
+          </p>
+          <span class="what-tag">coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="snap-section" id="case-study">
+      <p class="section-label reveal">work</p>
+
+      <div class="case-study">
+        <div class="case-meta reveal">
+          <div class="case-meta-item">
+            <p class="case-meta-label">client</p>
+            <p class="case-meta-value">lm bauwerk</p>
+          </div>
+          <div class="case-meta-item">
+            <p class="case-meta-label">location</p>
+            <p class="case-meta-value">berlin</p>
+          </div>
+          <div class="case-meta-item">
+            <p class="case-meta-label">sector</p>
+            <p class="case-meta-value">premium renovation</p>
+          </div>
+          <div class="case-meta-item">
+            <p class="case-meta-label">scope</p>
+            <p class="case-meta-value">website & positioning</p>
+          </div>
+        </div>
+
+        <h2 class="case-headline reveal">
+          a premium renovation company. a website that finally matched the work.
+        </h2>
+
+        <p class="case-body reveal">
+          lm bauwerk does premium renovation and construction in berlin.
+          high-end clients, exacting standards, projects that run into six figures.
+          their previous online presence said none of that. we rebuilt it from the
+          ground up — starting with how they position themselves, then building a
+          site that makes the quality of their work legible before anyone makes a call.
+        </p>
+
+        <div class="case-quote reveal">
+          <p>"better than the company i run."</p>
+          <cite>— lm bauwerk, berlin</cite>
+        </div>
+
+        <a href="https://lmbauwerk.de" target="_blank" rel="noopener" class="case-link">
+          lmbauwerk.de →
+        </a>
+      </div>
+    </section>
+
+    <section class="snap-section">
+      <p class="section-label reveal">in progress</p>
+
+      <div class="pipeline">
+        <div class="pipeline-item reveal">
+          <span class="pipeline-name">swimfree.style</span>
+          <span class="pipeline-meta">
+            <span class="pipeline-dot"></span>
+            swim coaching — split
+          </span>
+        </div>
+
+        <div class="pipeline-item reveal">
+          <span class="pipeline-name">artist portfolio</span>
+          <span class="pipeline-meta">
+            <span class="pipeline-dot"></span>
+            visual artist — in development
+          </span>
+        </div>
+
+        <div class="pipeline-item reveal">
+          <span class="pipeline-name">bodywork practice</span>
+          <span class="pipeline-meta">
+            <span class="pipeline-dot"></span>
+            somatic bodyworker — in development
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="snap-section">
+      <p class="section-label reveal">services & pricing</p>
+
+      <ul class="services-list">
+        <li class="reveal">
+          <span>website</span>
+          <span class="service-status">from €1,000</span>
+        </li>
+        <li class="reveal">
+          <span>website + positioning</span>
+          <span class="service-status">from €1,500</span>
+        </li>
+        <li class="reveal">
+          <span>social presence</span>
+          <span class="service-status soon">coming soon</span>
+        </li>
+        <li class="reveal">
+          <span>automations</span>
+          <span class="service-status soon">coming soon</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="snap-section" id="contact">
+      <div class="contact-block">
+        <h2 class="contact-headline reveal">we see you. the world will too.</h2>
+
+        <a href="mailto:hello@vizzible.co" class="contact-email reveal">
+          hello@vizzible.co
+        </a>
+      </div>
+
+      <div class="contact-footer">
+        <span>© vizzible</span>
+        <span>2026</span>
+      </div>
+    </section>
   </main>
 
   <script>
